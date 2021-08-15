@@ -1,7 +1,3 @@
-9616160918
-1591591598
-1591121598
-asdfghjgfd
-asdfgds
-sadfghfdsa
-q
+4
+1 0 1 0
+0 1 1 1
