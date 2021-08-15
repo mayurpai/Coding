@@ -23,5 +23,6 @@ int main()
         else
             a[i] = a[i - 2] + 1;
     }
+    cout << a[n - 1];
     return 0;
 }

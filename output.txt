@@ -1,2 +1,6 @@
-Welcome to CCD!
-Enjoy Your Cardamom Tea !
+Myr P
+a : 2
+e : 0
+i : 1
+o : 0
+u : 1
