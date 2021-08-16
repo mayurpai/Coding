@@ -19,13 +19,12 @@ int main()
     for (i = 2; i < n; i++)
     {
         if (i % 2 == 0)
-            a[i] = i;
+            a[i] = i / 2 + 7;
         else
-            a[i] = a[i - 2] + 1;
+            a[i] = a[i - 2] + 6;
     }
-    if (n % 2 == 0)
-        cout << a[n - 1] * 6 << "";
-    else
-        cout << (a[n - 1] * 7) / 2 << "";
+    cout << a[n - 1];
     return 0;
 }
+
+// 0,0,7,6,14,12,21,18
