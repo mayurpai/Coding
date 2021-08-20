@@ -8,9 +8,6 @@ int main()
 #endif
     int n;
     cin >> n;
-    if (n % 2 == 0)
-        cout << 6 * (n / 2 - 1);
-    else
-        cout << 7 * (n / 2);
+    cout << (n % 2 == 0 ? 6 * (n / 2 - 1) : 7 * (n / 2));
     return 0;
 }
