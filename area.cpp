@@ -3,10 +3,6 @@ using namespace std;
 
 int main()
 {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
 	float temp, cost = 0;
 	int interiorWall = 18, exteriorWall = 12, numInt, numExt;
 	cin >> numInt >> numExt;
