@@ -65,20 +65,21 @@ void patternFour(int n)
     {
         for (int j = 1; j <= n - i; j++)
         {
-            cout << " ";
+            cout << "  ";
         }
         for (int j = 1; j <= i; j++)
         {
-            cout << "*";
+            cout << "*"
+                 << " ";
         }
         cout << endl;
     }
 }
-//     *
-//    **
-//   ***
-//  ****
-// *****
+//         *
+//       * *
+//     * * *
+//   * * * *
+// * * * * *
 
 void patternFive(int n)
 {
@@ -429,6 +430,118 @@ void patternSeventeen(int n)
 //  1 3 3 1
 // 1 4 6 4 1
 
+void patternEighteen(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << " ";
+        }
+        for (int j = 1; j <= i; j++)
+        {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+}
+//     1
+//    1 2
+//   1 2 3
+//  1 2 3 4
+// 1 2 3 4 5
+
+void patternNineteen(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << "  ";
+        }
+        for (int j = 1; j <= i; j++)
+        {
+            cout << j << " ";
+        }
+        for (int j = i - 1; j >= 1; j--)
+        {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+    for (int i = n - 1; i >= 1; i--)
+    {
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << "  ";
+        }
+        for (int j = 1; j <= i; j++)
+        {
+            cout << j << " ";
+        }
+        for (int j = i - 1; j >= 1; j--)
+        {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+}
+//         1
+//       1 2 1
+//     1 2 3 2 1
+//   1 2 3 4 3 2 1
+// 1 2 3 4 5 4 3 2 1
+//   1 2 3 4 3 2 1
+//     1 2 3 2 1
+//       1 2 1
+//         1
+
+void patternTwenty(int n)
+{
+    int mid = (n + 1) / 2;
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << "  ";
+        }
+        for (int j = 1; j <= i; j++)
+        {
+            (j == mid) ? cout << "  " : cout << j << " ";
+        }
+        for (int j = i - 1; j >= 1; j--)
+        {
+            (j == mid) ? cout << "  " : cout << j << " ";
+        }
+        cout << endl;
+    }
+    for (int i = n - 1; i >= 1; i--)
+    {
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << "  ";
+        }
+        for (int j = 1; j <= i; j++)
+        {
+            (j == mid) ? cout << "  " : cout << j << " ";
+        }
+        for (int j = i - 1; j >= 1; j--)
+        {
+            (j == mid) ? cout << "  " : cout << j << " ";
+        }
+        cout << endl;
+    }
+}
+//         1
+//       1 2 1
+//     1 2   2 1
+//   1 2   4   2 1
+// 1 2   4 5 4   2 1
+//   1 2   4   2 1
+//     1 2   2 1
+//       1 2 1
+//         1
+
 int main()
 {
 #ifndef ONLINE_JUDGE
@@ -470,6 +583,12 @@ int main()
     patternSixteen(n);
     cout << endl;
     patternSeventeen(n);
+    cout << endl;
+    patternEighteen(n);
+    cout << endl;
+    patternNineteen(n);
+    cout << endl;
+    patternTwenty(n);
     cout << endl;
     return 0;
 }
