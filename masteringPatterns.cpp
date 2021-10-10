@@ -722,6 +722,42 @@ void patternTwentySeven(int n)
 //  *     *
 // *********
 
+void patternTwentyEight(int n)
+{
+    int count = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            (count % n == 0) ? cout << count++ : cout << count++ << "*";
+        }
+        cout << endl;
+    }
+}
+// 1*2*3*4*5
+// 6*7*8*9*10
+// 11*12*13*14*15
+// 16*17*18*19*20
+// 21*22*23*24*25
+
+void patternTwentyNine(int n)
+{
+    int count = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            (j != 1) ? cout << "*" << count++ : cout << count++;
+        }
+        cout << endl;
+    }
+}
+// 1
+// 2*3
+// 4*5*6
+// 7*8*9*10
+// 11*12*13*14*15
+
 int main()
 {
 #ifndef ONLINE_JUDGE
@@ -783,6 +819,10 @@ int main()
     patternTwentySix(n);
     cout << endl;
     patternTwentySeven(n);
+    cout << endl;
+    patternTwentyEight(n);
+    cout << endl;
+    patternTwentyNine(n);
     cout << endl;
     return 0;
 }
