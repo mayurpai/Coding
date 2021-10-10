@@ -542,6 +542,186 @@ void patternTwenty(int n)
 //       1 2 1
 //         1
 
+void patternTwentyOne(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = n; j > n - i; j--)
+            cout << "  ";
+        for (int j = n - i; j >= 1; j--)
+            cout << j << " ";
+        int k = 2;
+        for (int j = 0; j < n - i - 1; j++, k++)
+            cout << k << " ";
+        cout << endl;
+    }
+}
+// 5 4 3 2 1 2 3 4 5
+//   4 3 2 1 2 3 4
+//     3 2 1 2 3
+//       2 1 2
+//         1
+
+void patternTwentyTwo(int n)
+{
+    int count = 0;
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << count + (float(j) / 10) << " ";
+            count += 1;
+        }
+        cout << endl;
+    }
+}
+// 1.1
+// 2.1 3.2
+// 4.1 5.2 6.3
+// 7.1 8.2 9.3 10.4
+// 11.1 12.2 13.3 14.4 15.5
+
+void patternTwentyThree(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i - 1; j++)
+        {
+            cout << " ";
+        }
+        for (int j = 1; j <= i; j++)
+        {
+            cout << j << " ";
+        }
+        for (int j = i - 1; j >= 1; j--)
+        {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+}
+// 1
+//  1 2 1
+//   1 2 3 2 1
+//    1 2 3 4 3 2 1
+//     1 2 3 4 5 4 3 2 1
+
+void patternTwentyFour(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = i; j <= n - 1; j++)
+        {
+            cout << "  ";
+        }
+        for (int j = 1; j <= i; j++)
+        {
+            cout << j << " ";
+        }
+        for (int j = i - 1; j >= 1; j--)
+        {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+}
+//         1
+//       1 2 1
+//     1 2 3 2 1
+//   1 2 3 4 3 2 1
+// 1 2 3 4 5 4 3 2 1
+
+void patternTwentyFive(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = i; j <= n - 1; j++)
+        {
+            cout << "  ";
+        }
+        for (int j = i; j >= i; j--)
+        {
+            cout << j << " ";
+        }
+        for (int j = 1; j <= i - 1; j++)
+        {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+}
+//         1
+//       2 1
+//     3 1 2
+//   4 1 2 3
+// 5 1 2 3 4
+
+void patternTwentySix(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = i; j <= n - 1; j++)
+        {
+            cout << "  ";
+        }
+        for (int j = 1; j <= i; j++)
+        {
+            (j % 2 == 0) ? cout << "  " : cout << j << " ";
+        }
+        for (int j = i - 1; j >= 1; j--)
+        {
+            (j % 2 == 0) ? cout << "  " : cout << j << " ";
+        }
+        cout << endl;
+    }
+    for (int i = 1; i <= n - 1; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "  ";
+        }
+        for (int j = 1; j <= n - i; j++)
+        {
+            (j % 2 == 0) ? cout << "  " : cout << j << " ";
+        }
+        for (int j = n - i - 1; j >= 1; j--)
+        {
+            (j % 2 == 0) ? cout << "  " : cout << j << " ";
+        }
+        cout << endl;
+    }
+}
+//         1
+//       1   1
+//     1   3   1
+//   1   3   3   1
+// 1   3   5   3   1
+//   1   3   3   1
+//     1   3   1
+//       1   1
+//         1
+
+void patternTwentySeven(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << " ";
+        }
+        for (int j = 1; j <= 2 * i - 1; j++)
+        {
+            (j == 1 || j == 2 * i - 1 || i == n) ? cout << "*" : cout << " ";
+        }
+        cout << endl;
+    }
+}
+//     *
+//    * *
+//   *   *
+//  *     *
+// *********
+
 int main()
 {
 #ifndef ONLINE_JUDGE
@@ -589,6 +769,20 @@ int main()
     patternNineteen(n);
     cout << endl;
     patternTwenty(n);
+    cout << endl;
+    patternTwentyOne(n);
+    cout << endl;
+    patternTwentyTwo(n);
+    cout << endl;
+    patternTwentyThree(n);
+    cout << endl;
+    patternTwentyFour(n);
+    cout << endl;
+    patternTwentyFive(n);
+    cout << endl;
+    patternTwentySix(n);
+    cout << endl;
+    patternTwentySeven(n);
     cout << endl;
     return 0;
 }
