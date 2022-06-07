@@ -1,6 +1,6 @@
-public class main {
+public class Main {
     public static void main(String[] args) {
-        int[] nums = {12,345,2,6,7898};
+        int[] nums = {1212,345,2,6,7898};
         // int[] nums = {555,901,482,1771};
         System.out.println(findNumbers(nums));
     }
