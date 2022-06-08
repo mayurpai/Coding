@@ -1,2 +1,14 @@
-5
-3
+Asc Sorting
+Mahesh
+Manoj
+Mayur
+Ramesh
+Suresh
+
+Dsc Sorting
+Suresh
+Ramesh
+Mayur
+Manoj
+Mahesh
+
