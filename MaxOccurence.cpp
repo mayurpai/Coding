@@ -9,6 +9,7 @@ int main()
     freopen("output.txt", "w", stdout);
 #endif
     unordered_map<string, int> counter;
+    int count = 0;
     int maxCount = INT_MIN;
     string maxOcc;
     string inputString;
@@ -25,6 +26,7 @@ int main()
             maxCount = itr->second;
         }
     }
-    cout << maxOcc << ": " << maxCount;
+    cout << "The Length Of '" << maxOcc << "' = " << maxOcc.length() << endl;
+    cout << "It Has Occurred: " << maxCount << " Times!";
     return 0;
 }

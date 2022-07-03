@@ -1,1 +1,2 @@
-Is: 3
+The Length Of 'Is' = 2
+It Has Occurred: 3 Times!
