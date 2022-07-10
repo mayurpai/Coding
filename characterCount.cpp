@@ -12,8 +12,9 @@ int main()
     getline(cin, str);
     int n;
     int charArr[123] = {0};
-    for (n = 0; n < str.length(); n++)
-        ;
+    // for (n = 0; n < str.length(); n++)
+    //     ;
+    n = strlen(str.c_str());
 
     for (int i = 0; i < n; i++)
         charArr[str[i]]++;

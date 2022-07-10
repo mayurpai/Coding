@@ -1,2 +1,9 @@
-The Length Of 'Is' = 2
-It Has Occurred: 3 Times!
+! 1
+I 1
+a 3
+h 1
+m 2
+n 2
+o 1
+t 1
+u 1
